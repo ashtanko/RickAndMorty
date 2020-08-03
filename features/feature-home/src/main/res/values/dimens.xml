@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="item_character_margin">20dp</dimen>
+    <dimen name="item_character_image_size">60dp</dimen>
+    <dimen name="item_offset">10dp</dimen>
+    <dimen name="item_error_padding">10dp</dimen>
+    <dimen name="characters_list_item_error_button_top_margin">6dp</dimen>
+    <dimen name="characters_list_item_loading_padding">10dp</dimen>
+    <dimen name="characters_list_item_loading_size">30dp</dimen>
+</resources>

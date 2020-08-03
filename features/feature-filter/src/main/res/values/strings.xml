@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="filter_done_button_title">Done</string>
+    <string name="filter_by_name_title">By Name</string>
+    <string name="filter_by_status_title">By Status</string>
+    <string name="filter_by_species_title">By Species</string>
+</resources>

@@ -1,0 +1,10 @@
+rootProject.name = "RickAndMorty"
+include(":app")
+include(":core")
+include(":domain")
+include(":network")
+include(":data")
+include(":common:ui")
+include(":features:feature-filter")
+include(":features:feature-home")
+include(":features:feature-details")
