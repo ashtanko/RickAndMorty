@@ -1,6 +1,5 @@
 package dev.shtanko.feature.detail
 
-import android.content.Context
 import android.os.Bundle
 import android.view.View
 import androidx.navigation.fragment.navArgs
@@ -25,11 +24,6 @@ class CharacterDetailFragment :
     lateinit var progressDialog: ProgressBarDialog
 
     private val args: CharacterDetailFragmentArgs by navArgs()
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        inject()
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

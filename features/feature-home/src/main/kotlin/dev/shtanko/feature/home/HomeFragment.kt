@@ -11,14 +11,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import dev.shtanko.common.ui.base.BaseViewModelFragment
 import dev.shtanko.common.ui.extensions.observe
-import dev.shtanko.core.App
 import dev.shtanko.core.navigation.AppNavigation
 import dev.shtanko.feature.home.adapter.CharacterAdapter
 import dev.shtanko.feature.home.adapter.CharactersListAdapterState
 import dev.shtanko.feature.home.databinding.FragmentHomeBinding
-import dev.shtanko.feature.home.di.HomeComponent
+import dev.shtanko.feature.home.di.initialInjection
 import dev.shtanko.feature.home.model.CharacterModel
-import timber.log.Timber
 import javax.inject.Inject
 
 class HomeFragment :
@@ -68,10 +66,7 @@ class HomeFragment :
     }
 
     override fun inject() {
-        HomeComponent.Initializer.init(
-            (requireContext().applicationContext as App).getAppComponent(),
-            this
-        ).inject(this)
+        initialInjection()
     }
 
     private fun onViewDataChange(viewData: PagedList<CharacterModel>) {

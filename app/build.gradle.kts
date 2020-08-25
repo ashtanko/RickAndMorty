@@ -16,6 +16,7 @@ import Dependencies.NAVIGATION_FRAGMENT
 import Dependencies.NAVIGATION_UI
 import Dependencies.TIMBER
 import extensions.addTestsDependencies
+import extensions.getLocalProperty
 
 plugins {
     id(Plugins.ANDROID_APPLICATION)
@@ -39,13 +40,33 @@ android {
         testInstrumentationRunner = TEST_INSTRUMENTATION_RUNNER
     }
 
+    signingConfigs {
+        create(BuildType.RELEASE) {
+            keyAlias = getLocalProperty("signing.key.alias")
+            keyPassword = getLocalProperty("signing.key.password")
+            storeFile = file(getLocalProperty("signing.store.file"))
+            storePassword = getLocalProperty("signing.store.password")
+        }
+    }
+
     buildFeatures {
         dataBinding = AndroidBuildConfig.DATA_BINDING
     }
 
     buildTypes {
-        getByName("release") {
-            isMinifyEnabled = true
+        getByName(BuildType.RELEASE) {
+            proguardFiles("proguard-android-optimize.txt", "proguard-rules.pro")
+            signingConfig = signingConfigs.getByName(name)
+
+            isMinifyEnabled = BuildTypeRelease.isMinifyEnabled
+            isTestCoverageEnabled = BuildTypeRelease.isTestCoverageEnabled
+        }
+
+        getByName(BuildType.DEBUG) {
+            applicationIdSuffix = BuildTypeDebug.applicationIdSuffix
+            versionNameSuffix = BuildTypeDebug.versionNameSuffix
+            isMinifyEnabled = BuildTypeDebug.isMinifyEnabled
+            isTestCoverageEnabled = BuildTypeDebug.isTestCoverageEnabled
         }
     }
 

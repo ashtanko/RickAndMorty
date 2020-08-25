@@ -9,5 +9,10 @@ import dev.shtanko.common.ui.glide.GlideApp
 @SuppressLint("CheckResult")
 @BindingAdapter("imageUrl", "imagePlaceholder", requireAll = false)
 fun ImageView.imageUrl(url: String?, @DrawableRes placeholderId: Int?) {
-    GlideApp.with(this).load(url).centerCrop().into(this)
+    val glide = GlideApp.with(this).load(url)
+    if (placeholderId == null) {
+        glide.centerCrop().into(this)
+    } else {
+        glide.centerCrop().placeholder(placeholderId).into(this)
+    }
 }

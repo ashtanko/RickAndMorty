@@ -58,6 +58,7 @@ android {
         lintConfig = rootProject.file("config/lint-config.xml")
         isCheckAllWarnings = true
         isWarningsAsErrors = true
+        isAbortOnError = false
     }
 
     testOptions {

@@ -2,6 +2,7 @@ package dev.shtanko.feature.home.di
 
 import dagger.Component
 import dev.shtanko.common.ui.di.ViewModelModule
+import dev.shtanko.core.App
 import dev.shtanko.core.di.ApplicationProvider
 import dev.shtanko.core.di.scope.FragmentScope
 import dev.shtanko.feature.home.HomeFragment
@@ -29,4 +30,11 @@ interface HomeComponent {
             }
         }
     }
+}
+
+fun HomeFragment.initialInjection() {
+    HomeComponent.Initializer.init(
+        (requireContext().applicationContext as App).getAppComponent(),
+        this
+    ).inject(this)
 }

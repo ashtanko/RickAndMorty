@@ -21,6 +21,7 @@ var View.gone
     }
 
 @set:BindingAdapter("invisible")
+@Suppress("UNUSED")
 var View.invisible
     get() = visibility == INVISIBLE
     set(value) {
