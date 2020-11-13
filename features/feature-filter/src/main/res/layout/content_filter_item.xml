@@ -4,13 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="onCheckedChangeListener"
             type="android.widget.CompoundButton.OnCheckedChangeListener" />
-
-        <variable
-            name="isEnabled"
-            type="Boolean" />
 
         <variable
             name="checkBoxTitle"
@@ -51,7 +48,8 @@
             app:layout_constraintEnd_toStartOf="@+id/end_guideline"
             app:layout_constraintStart_toStartOf="@+id/start_guideline"
             app:layout_constraintTop_toBottomOf="@+id/filter_check_box"
-            tools:ignore="LabelFor" />
+            tools:ignore="LabelFor"
+            tools:text="@tools:sample/lorem/random" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/start_guideline"

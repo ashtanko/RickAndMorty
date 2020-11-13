@@ -1,10 +1,8 @@
 package dev.shtanko.core.navigation
 
-interface HomeNavigator {
+interface HomeNavigator : BackNavigator {
 
     fun fromHomeToDetails(id: Long, title: String)
 
     fun fromHomeToFilter()
-
-    fun navigateBack()
 }

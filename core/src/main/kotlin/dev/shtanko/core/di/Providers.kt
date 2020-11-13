@@ -12,6 +12,7 @@ interface ApplicationProvider : ToolsProvider, UseCaseProvider
 
 interface ToolsProvider {
     fun provideContext(): App
+
     fun provideNavigation(): AppNavigation
 }
 

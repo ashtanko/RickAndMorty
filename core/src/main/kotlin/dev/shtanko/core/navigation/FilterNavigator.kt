@@ -1,5 +1,5 @@
 package dev.shtanko.core.navigation
 
-interface FilterNavigator {
-    fun navigateBack()
+interface FilterNavigator : BackNavigator {
+    fun fromFilterToTest()
 }

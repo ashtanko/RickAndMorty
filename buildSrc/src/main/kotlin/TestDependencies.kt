@@ -1,5 +1,6 @@
 object TestDependencies {
     const val JUNIT = "junit:junit:${Versions.JUNIT}"
+    const val JUNIT_BENCHMARK = "androidx.benchmark:benchmark-junit4:1.0.0"
     const val MOCKITO = "com.nhaarman.mockitokotlin2:mockito-kotlin:${Versions.MOCKITO}"
     const val MOCKK = "io.mockk:mockk:${Versions.MOCKK}"
     const val ASSERTJ = "org.assertj:assertj-core:${Versions.ASSERTJ}"

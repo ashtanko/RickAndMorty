@@ -18,6 +18,12 @@
         android:label="Filter"
         tools:layout="@layout/fragment_filter" />
 
+    <fragment
+        android:id="@+id/test_screen"
+        android:name="dev.shtanko.feature.filter.TestFragment"
+        android:label="Test"
+        tools:layout="@layout/fragment_test" />
+
     <include app:graph="@navigation/navigation_details_graph" />
 
 
@@ -42,6 +48,14 @@
     <action
         android:id="@+id/action_home_to_filter"
         app:destination="@id/filter_screen"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+    <action
+        android:id="@+id/action_filter_to_test"
+        app:destination="@id/test_screen"
         app:enterAnim="@anim/nav_default_enter_anim"
         app:exitAnim="@anim/nav_default_exit_anim"
         app:popEnterAnim="@anim/nav_default_pop_enter_anim"

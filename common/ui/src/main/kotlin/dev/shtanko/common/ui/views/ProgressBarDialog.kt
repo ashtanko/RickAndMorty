@@ -14,7 +14,7 @@ class ProgressBarDialog(
     private lateinit var viewBinding: ViewProgressDialogBinding
 
     override fun show() {
-        show(null)
+        show(R.string.loading_title)
     }
 
     fun show(@StringRes messageRes: Int?) {

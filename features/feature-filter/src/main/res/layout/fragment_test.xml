@@ -70,59 +70,6 @@
                 app:layout_constraintStart_toStartOf="@+id/start_guideline"
                 app:layout_constraintTop_toBottomOf="@+id/content_species_filter" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/test_button"
-                style="@style/Widget.MaterialComponents.Button"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:onClick="@{(v) -> viewModel.onTestClick()}"
-                android:text="Test"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toStartOf="@+id/end_guideline"
-                app:layout_constraintStart_toStartOf="@+id/start_guideline"
-                app:layout_constraintTop_toBottomOf="@+id/done_button" />
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                app:layout_constraintBottom_toTopOf="@+id/bottom_guideline"
-                app:layout_constraintEnd_toStartOf="@+id/end_guideline"
-                app:layout_constraintStart_toStartOf="@+id/start_guideline"
-                app:layout_constraintTop_toBottomOf="@+id/test_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-
-                <RadioGroup
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:checkedButton="@id/one"
-                    android:orientation="horizontal"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <androidx.appcompat.widget.AppCompatRadioButton
-                        android:id="@+id/one"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_weight="1"
-                        android:text="@string/filter_done_button_title" />
-
-                    <androidx.appcompat.widget.AppCompatRadioButton
-                        android:id="@+id/two"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_weight="1"
-                        android:text="@string/filter_done_button_title" />
-
-                </RadioGroup>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/start_guideline"

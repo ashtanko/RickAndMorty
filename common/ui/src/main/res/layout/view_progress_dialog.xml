@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
         <variable
             name="isLoading"
             type="Boolean" />
@@ -12,8 +13,7 @@
             type="String" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/shape_progress_dialog"
@@ -27,18 +27,19 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:visible="@{isLoading}"/>
+            app:visible="@{isLoading}" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/progress_bar_message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{message}"
+            android:textColor="#000000"
+            app:gone="@{message.empty}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/progress_bar_loading"
-            app:gone="@{message.empty}"
             tools:text="Loading" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

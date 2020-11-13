@@ -38,6 +38,10 @@ class FilterViewModel @Inject constructor(
         speciesFilterItem.notifyChange()
     }
 
+    fun onTestClick() {
+        event.postValue(FilterViewEvent.OpenTest)
+    }
+
     fun applyFilter() {
         val items = Triple(
             nameFilterItem,

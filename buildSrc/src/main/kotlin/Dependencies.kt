@@ -38,6 +38,8 @@ object Dependencies {
     const val PAGING = "androidx.paging:paging-runtime-ktx:${Versions.PAGING}"
     const val PAGING_RX = "androidx.paging:paging-rxjava2:${Versions.PAGING}"
 
-    const val GLIDE = "com.github.bumptech.glide:glide:4.11.0"
-    const val GLIDE_COMPILER = "com.github.bumptech.glide:compiler:4.11.0"
+    const val GLIDE = "com.github.bumptech.glide:glide:${Versions.GLIDE}"
+    const val GLIDE_COMPILER = "com.github.bumptech.glide:compiler:${Versions.GLIDE}"
+    const val LINT_API = "com.android.tools.lint:lint-api:${Versions.LINT}"
+    const val LINT_CHECKS = "com.android.tools.lint:lint-checks:${Versions.LINT}"
 }

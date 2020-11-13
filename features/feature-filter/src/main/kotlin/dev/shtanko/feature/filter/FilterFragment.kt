@@ -42,9 +42,8 @@ class FilterFragment :
 
     private fun onViewEvent(viewEvent: FilterViewEvent) {
         when (viewEvent) {
-            is FilterViewEvent.ApplyFilter -> {
-                navigation.navigateBack()
-            }
+            is FilterViewEvent.ApplyFilter -> navigation.navigateBack()
+            FilterViewEvent.OpenTest -> navigation.fromFilterToTest()
         }
     }
 }

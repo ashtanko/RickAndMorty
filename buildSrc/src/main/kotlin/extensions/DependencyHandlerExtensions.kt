@@ -25,6 +25,7 @@ fun DependencyHandler.androidTestImplementation(dependencyNotation: String): Dep
 
 fun DependencyHandler.addTestsDependencies() {
     testImplementation(TestDependencies.JUNIT)
+    testImplementation(TestDependencies.JUNIT_BENCHMARK)
     testImplementation(TestDependencies.MOCKITO)
     testImplementation(TestDependencies.MOCKK)
     testImplementation(TestDependencies.ASSERTJ)
